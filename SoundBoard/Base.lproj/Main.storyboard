@@ -53,9 +53,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHs-X2-i2I">
-                                <rect key="frame" x="154" y="108" width="106" height="50"/>
+                                <rect key="frame" x="146.5" y="108" width="121" height="50"/>
                                 <color key="tintColor" red="0.96620899439999997" green="0.27918272" blue="0.2004236438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Grabar" image="grabar">
+                                <state key="normal" title="GRABAR" image="grabar">
                                     <color key="titleColor" red="0.96620899439999997" green="0.27918272" blue="0.2004236438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnw-Sd-IpH">
-                                <rect key="frame" x="20" y="258" width="374" height="21"/>
+                                <rect key="frame" x="20" y="358" width="374" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -80,12 +80,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre de Audio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PvN-Pc-cSg">
-                                <rect key="frame" x="20" y="299" width="374" height="17"/>
+                                <rect key="frame" x="20" y="399" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1au-Av-pCN">
-                                <rect key="frame" x="179.5" y="336" width="55" height="30"/>
+                                <rect key="frame" x="179.5" y="517" width="55" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Agregar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,22 +94,50 @@
                                     <action selector="agregarTapped:" destination="Zld-0k-Qg2" eventType="touchUpInside" id="yQz-St-Y9Y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-ym-pby">
+                                <rect key="frame" x="184" y="456" width="46" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="0.96620899439999997" green="0.27918272" blue="0.2004236438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volumen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B9-Nl-oph">
+                                <rect key="frame" x="173.5" y="248" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HGl-q8-tee">
+                                <rect key="frame" x="149" y="290" width="118" height="31"/>
+                                <connections>
+                                    <action selector="volumenTapped:" destination="Zld-0k-Qg2" eventType="valueChanged" id="UYU-5r-aMU"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="9B9-Nl-oph" firstAttribute="centerX" secondItem="Es4-AI-8Wd" secondAttribute="centerX" id="1vh-jC-hpX"/>
                             <constraint firstItem="aGa-Bq-REp" firstAttribute="top" secondItem="rHs-X2-i2I" secondAttribute="bottom" constant="20" id="2mE-fI-RoM"/>
+                            <constraint firstItem="9B9-Nl-oph" firstAttribute="centerX" secondItem="aGa-Bq-REp" secondAttribute="centerX" id="4D3-bn-djw"/>
                             <constraint firstItem="PvN-Pc-cSg" firstAttribute="centerX" secondItem="Gnw-Sd-IpH" secondAttribute="centerX" id="9Ec-g8-FUx"/>
                             <constraint firstItem="PvN-Pc-cSg" firstAttribute="width" secondItem="Gnw-Sd-IpH" secondAttribute="width" id="AZO-r5-2F3"/>
+                            <constraint firstItem="HGl-q8-tee" firstAttribute="leading" secondItem="d7D-64-JFu" secondAttribute="leading" constant="151" id="BIL-qA-pXm"/>
+                            <constraint firstItem="7fw-ym-pby" firstAttribute="top" secondItem="PvN-Pc-cSg" secondAttribute="bottom" constant="40" id="Bv5-02-bf3"/>
                             <constraint firstItem="Gnw-Sd-IpH" firstAttribute="centerX" secondItem="aGa-Bq-REp" secondAttribute="centerX" id="EQb-DW-aL4"/>
+                            <constraint firstItem="7fw-ym-pby" firstAttribute="centerX" secondItem="PvN-Pc-cSg" secondAttribute="centerX" id="F0x-S2-pQO"/>
                             <constraint firstItem="aGa-Bq-REp" firstAttribute="centerX" secondItem="rHs-X2-i2I" secondAttribute="centerX" id="Irr-mg-9cb"/>
                             <constraint firstItem="rHs-X2-i2I" firstAttribute="top" secondItem="d7D-64-JFu" secondAttribute="top" constant="20" id="NUV-4g-jhU"/>
                             <constraint firstItem="Gnw-Sd-IpH" firstAttribute="leading" secondItem="d7D-64-JFu" secondAttribute="leading" constant="20" id="NZp-0r-4oH"/>
                             <constraint firstItem="rHs-X2-i2I" firstAttribute="centerX" secondItem="d7D-64-JFu" secondAttribute="centerX" id="T5q-VM-8R1"/>
-                            <constraint firstItem="1au-Av-pCN" firstAttribute="centerX" secondItem="PvN-Pc-cSg" secondAttribute="centerX" id="dKp-lF-YrA"/>
+                            <constraint firstItem="9B9-Nl-oph" firstAttribute="centerX" secondItem="Es4-AI-8Wd" secondAttribute="centerX" id="WyH-eO-VoS"/>
+                            <constraint firstItem="1au-Av-pCN" firstAttribute="centerX" secondItem="7fw-ym-pby" secondAttribute="centerX" id="c0b-jT-1ro"/>
+                            <constraint firstItem="9B9-Nl-oph" firstAttribute="centerX" secondItem="Es4-AI-8Wd" secondAttribute="centerX" id="cv4-E4-Rt0"/>
                             <constraint firstItem="d7D-64-JFu" firstAttribute="trailing" secondItem="Gnw-Sd-IpH" secondAttribute="trailing" constant="20" id="fw3-nk-ygo"/>
-                            <constraint firstItem="1au-Av-pCN" firstAttribute="top" secondItem="PvN-Pc-cSg" secondAttribute="bottom" constant="20" id="j5F-dr-Wg6"/>
                             <constraint firstItem="PvN-Pc-cSg" firstAttribute="top" secondItem="Gnw-Sd-IpH" secondAttribute="bottom" constant="20" id="pXc-Wd-Oz9"/>
-                            <constraint firstItem="Gnw-Sd-IpH" firstAttribute="top" secondItem="aGa-Bq-REp" secondAttribute="bottom" constant="30" id="vCa-Y6-dfP"/>
+                            <constraint firstItem="Gnw-Sd-IpH" firstAttribute="top" secondItem="aGa-Bq-REp" secondAttribute="bottom" constant="130" id="vCa-Y6-dfP"/>
+                            <constraint firstItem="d7D-64-JFu" firstAttribute="trailing" secondItem="HGl-q8-tee" secondAttribute="trailing" constant="149" id="wPo-yE-0Kc"/>
+                            <constraint firstItem="9B9-Nl-oph" firstAttribute="top" secondItem="aGa-Bq-REp" secondAttribute="bottom" constant="20" id="xsc-Md-oXX"/>
+                            <constraint firstItem="HGl-q8-tee" firstAttribute="top" secondItem="9B9-Nl-oph" secondAttribute="bottom" constant="21" id="yZk-F9-a9J"/>
+                            <constraint firstItem="1au-Av-pCN" firstAttribute="top" secondItem="7fw-ym-pby" secondAttribute="bottom" constant="40" id="ycA-bY-LZX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d7D-64-JFu"/>
                     </view>
@@ -119,6 +147,8 @@
                         <outlet property="grabarButton" destination="rHs-X2-i2I" id="bv6-AB-eXT"/>
                         <outlet property="nombreTextField" destination="PvN-Pc-cSg" id="C74-tt-HGP"/>
                         <outlet property="reproducirButton" destination="aGa-Bq-REp" id="p02-QT-53v"/>
+                        <outlet property="tiempoLabel" destination="7fw-ym-pby" id="oNB-GW-Xa3"/>
+                        <outlet property="volumenSlider" destination="HGl-q8-tee" id="beh-oj-sqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6P-qW-aXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
